@@ -2,32 +2,22 @@
 public class Aliquot {
 
     
-    public static void main(String[] args) {
-          int divisors(int n){
-    if(n==1) return 0;
-    int sum = 1;
-    for(int i = 2; i <= Math.sqrt(n); i++) {
-        if(n % i == 0) {
-            sum += i;
-            int d = n/i;
-            if(d != i) {
-                sum+=d;
-            }
-        }
-    }
-    return sum;
+public static void main(String[] args) {
+          
+
+for(int totaTimes=1;totaTimes<=100;totaTimes++){  //  runs up to 100 times
+int sum=0;                                   // initializing the integer variable
+ for(int insideLoop=1;insideLoop<=totaTimes/2;insideLoop++){   // condition checking
+if(totaTimes%insideLoop==0){
+sum+=insideLoop;
+}                           
+}
+if(sum==totaTimes){  
+System.out.println("The perfect number is  "+totaTimes);//printing perfect no.
+}
+}
 }
 
-// use this 
-void sequence(int n){
-    System.out.println(n);
-    int div = divisors(n);
-    while(div>0) {
-        System.out.println(div);
-        div = divisors(div);
-    }
-    System.out.println(div);
 }
-    }
+
     
-}
